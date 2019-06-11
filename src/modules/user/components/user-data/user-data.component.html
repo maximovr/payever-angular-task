@@ -1,0 +1,13 @@
+<mat-card class="user-card" *ngIf="user">
+  <div class="photo">
+    <img [src]="user.avatar" alt="">
+  </div>
+  <div class="info">
+    <h2 class="first-name">First Name: {{user.first_name}}</h2>
+    <h2 class="last-name">Last Name: {{user.last_name}}</h2>
+    <h3 class="email">Email:
+      <a [href]="'mailto:' + user.email">{{user.email}}</a>
+    </h3>
+  </div>
+  <button mat-flat-button color="primary" [routerLink]="'/users'">Back</button>
+</mat-card>
